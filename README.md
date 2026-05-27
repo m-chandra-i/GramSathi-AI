@@ -56,3 +56,24 @@ GramSathi AI now includes:
 - Streamlit user interface
 
 
+## Run Locally
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/m-chandra-i/GramSathi-AI.git
+```
+
+2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the application
+
+```bash
+streamlit run streamlit_app.py
+```
+
+
