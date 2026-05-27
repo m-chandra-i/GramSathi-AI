@@ -36,3 +36,15 @@ AI-powered rural assistant for farmers and rural communities.
 ### Version 3
 - [ ] Hindi voice assistant
 - [ ] AI chatbot
+      
+
+
+## Demo Preview
+
+Current version:
+- User enters crop
+- User enters district
+- User enters farming issue
+- System gives basic suggestions
+
+
