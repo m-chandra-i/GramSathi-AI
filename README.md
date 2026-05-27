@@ -48,3 +48,11 @@ Current version:
 - System gives basic suggestions
 
 
+## Current Version
+GramSathi AI now includes:
+
+- Basic crop suggestions
+- Issue-based recommendations
+- Streamlit user interface
+
+
