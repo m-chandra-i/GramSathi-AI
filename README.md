@@ -19,3 +19,20 @@ AI-powered rural assistant for farmers and rural communities.
 - Streamlit
 - APIs
 - Git/GitHub
+
+
+## Project Roadmap
+
+### Version 1
+- [x] Basic crop input
+- [x] District input
+- [x] Farmer issue input
+- [x] Basic crop recommendations
+
+### Version 2
+- [ ] Weather API integration
+- [ ] Government scheme suggestions
+
+### Version 3
+- [ ] Hindi voice assistant
+- [ ] AI chatbot
