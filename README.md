@@ -1,25 +1,71 @@
-# GramSathi AI 🌾
+# GramSathi AI
 
-AI-powered rural assistant for farmers and rural communities.
+AI-powered rural assistant for farmers and rural communities, focused on practical crop guidance for Rajasthan villages.
 
-## Features (Phase 1)
-- Crop information
-- Weather updates
-- Government scheme suggestions
-- Market price information
+## Live App
 
-## Future Features
-- Hindi voice assistant
-- AI chatbot
-- Crop disease detection
-- Price prediction using ML
+https://gramsathi-ai.streamlit.app/
+
+## Current Version
+
+GramSathi AI now includes a Rajasthan rural crop guide with 30+ crops and a cleaner Streamlit dashboard UI.
+
+## Features
+
+- 30+ Rajasthan rural crop database
+- Crop search by name, Hindi name, district, soil, season, and rural zone
+- Kharif, Rabi, Summer, and perennial crop filtering
+- Water requirement filter: Low, Medium, High
+- Drought-suitable crop suggestions
+- Crop comparison table
+- Crop calendar with sowing and harvesting periods
+- Village crop planner by rural zone
+- Seed requirement calculator
+- Full crop data table
+- CSV download option
+
+## Crop Data Includes
+
+Each crop contains:
+
+- Crop name
+- Hindi name
+- Crop type
+- Season
+- Suitable Rajasthan rural zones
+- Suitable districts
+- Soil type
+- Water requirement
+- Drought suitability
+- Duration in days
+- Sowing time
+- Harvesting time
+- Rainfall and temperature range
+- Seed rate
+- Spacing
+- Irrigation advice
+- Common issues
+- Best farming practices
+- Market use
+
+## Rajasthan Rural Zones Covered
+
+- Arid West
+- Shekhawati
+- Semi-arid Central
+- Eastern Plains
+- Hadoti
+- Mewar
+- Tribal South
+- Irrigated Canal
 
 ## Tech Stack
+
 - Python
 - Streamlit
-- APIs
-- Git/GitHub
-
+- Pandas
+- GitHub
+- Streamlit Community Cloud
 
 ## Project Roadmap
 
@@ -30,31 +76,22 @@ AI-powered rural assistant for farmers and rural communities.
 - [x] Basic crop recommendations
 
 ### Version 2
-- [ ] Weather API integration
-- [ ] Government scheme suggestions
+- [x] Rajasthan crop database with 30+ crops
+- [x] Improved Streamlit UI
+- [x] Crop filters
+- [x] Crop comparison
+- [x] Crop calendar
+- [x] Village crop planner
+- [x] Seed requirement calculator
 
 ### Version 3
+- [ ] Weather API integration
+- [ ] Government scheme suggestions
+- [ ] Market price information
 - [ ] Hindi voice assistant
 - [ ] AI chatbot
-      
-
-
-## Demo Preview
-
-Current version:
-- User enters crop
-- User enters district
-- User enters farming issue
-- System gives basic suggestions
-
-
-## Current Version
-GramSathi AI now includes:
-
-- Basic crop suggestions
-- Issue-based recommendations
-- Streamlit user interface
-
+- [ ] Crop disease detection
+- [ ] Price prediction using ML
 
 ## Run Locally
 
@@ -62,18 +99,3 @@ GramSathi AI now includes:
 
 ```bash
 git clone https://github.com/m-chandra-i/GramSathi-AI.git
-```
-
-2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the application
-
-```bash
-streamlit run streamlit_app.py
-```
-
-
