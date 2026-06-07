@@ -1287,6 +1287,28 @@ RAJASTHAN_CROPS = [
         "best_practices": "Pick pods frequently and keep plants healthy for continuous harvest.",
         "market_use": "Fresh vegetable, local market",
     },
+        {
+        "crop": "Brinjal",
+        "hindi": "बैंगन",
+        "type": "Vegetable",
+        "season": "Kharif / Rabi",
+        "zones": ["Eastern Plains", "Hadoti", "Mewar"],
+        "districts": "Karauli, Jaipur, Alwar, Kota, Udaipur",
+        "soil": "Fertile, well-drained sandy loam",
+        "water_need": "Medium",
+        "drought_fit": "Medium",
+        "duration_days": 120,
+        "sowing": "June-July or October-November",
+        "harvest": "70-120 days after transplanting",
+        "rainfall_mm": "400-700 or irrigation supported",
+        "temperature_c": "22-30",
+        "seed_rate_kg_ha": 0.4,
+        "spacing": "60 x 60 cm",
+        "irrigation": "Regular light irrigation; avoid waterlogging",
+        "common_issues": "Shoot and fruit borer, wilt, leaf spot",
+        "best_practices": "Use healthy seedlings, rotate crops, remove damaged fruits, and monitor pests regularly.",
+        "market_use": "Fresh vegetable, local and wholesale markets",
+    },
 ]
 
 
