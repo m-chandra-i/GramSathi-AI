@@ -8,11 +8,11 @@ https://gramsathi-ai.streamlit.app/
 
 ## Current Version
 
-GramSathi AI now includes a Rajasthan rural crop guide with 80+ crops and a cleaner Streamlit dashboard UI.
+GramSathi AI now includes a Rajasthan rural crop guide with 30+ crops and a cleaner Streamlit dashboard UI.
 
 ## Features
 
-- 80+ Rajasthan rural crop database
+- 30+ Rajasthan rural crop database
 - Crop search by name, Hindi name, district, soil, season, and rural zone
 - Kharif, Rabi, Summer, and perennial crop filtering
 - Water requirement filter: Low, Medium, High
