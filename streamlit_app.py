@@ -1325,19 +1325,39 @@ def show_data_table(df: pd.DataFrame) -> None:
     
     st.dataframe(export_df, use_container_width=True, hide_index=True)
 
-export_df = filtered_df.drop(
-    columns=["search_blob"],
-    errors="ignore"
-)
-
-csv = export_df.to_csv(index=False)
-
-st.download_button(
-    "Download CSV",
-    csv,
-    "gramsathi_crops.csv",
-    "text/csv"
-)
+def show_data_table(df: pd.DataFrame) -> None:
+    st.subheader("Full Crop Data")
+    
+    # ✅ FIXED: Proper column selection and zones conversion
+    export_df = df[
+        [col for col in df.columns if col not in ["search_blob", "zones"]]
+    ].copy()
+    
+    # Add formatted zones column
+    export_df["zones"] = df["zones"].apply(", ".join)
+    
+    st.dataframe(export_df, use_container_width=True, hide_index=True)
+    
+    # ✅ MOVE THIS INSIDE THE FUNCTION
+    csv = export_df.to_csv(index=False)
+    st.download_button(
+        "📥 Download CSV",
+        csv,
+        "gramsathi_crops.csv",
+        "text/csv"
+    )
+    
+    st.markdown(
+        """
+        <div class="source-box">
+            <b>Use note:</b> This is a practical planning dataset for Rajasthan rural crop selection.
+            Weather, soil test, seed variety and mandi conditions change by village and year, so final
+            decisions should be checked with the local Agriculture Department, Krishi Vigyan Kendra,
+            or experienced local agronomist.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.markdown(
         """
