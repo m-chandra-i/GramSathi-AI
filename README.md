@@ -139,7 +139,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Support & Feedback
 
-- 📧 Email: [chanramohan61961@gmail.com]
+- 📧 Email: [gramsathi.ai@gmail.com]
 - 🐛 Report bugs: [GitHub Issues](https://github.com/m-chandra-i/GramSathi-AI/issues)
 - 💡 Suggest features: [GitHub Discussions](https://github.com/m-chandra-i/GramSathi-AI/discussions)
 
