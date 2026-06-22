@@ -1325,12 +1325,19 @@ def show_data_table(df: pd.DataFrame) -> None:
     
     st.dataframe(export_df, use_container_width=True, hide_index=True)
 
-    st.download_button(
-        "Download crop data as CSV",
-        data=export_df.to_csv(index=False).encode("utf-8"),
-        file_name="rajasthan_rural_crop_data.csv",
-        mime="text/csv",
-    )
+export_df = filtered_df.drop(
+    columns=["search_blob"],
+    errors="ignore"
+)
+
+csv = export_df.to_csv(index=False)
+
+st.download_button(
+    "Download CSV",
+    csv,
+    "gramsathi_crops.csv",
+    "text/csv"
+)
 
     st.markdown(
         """
