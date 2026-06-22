@@ -22,7 +22,7 @@ GramSathi AI now includes a Rajasthan rural crop guide with 30+ crops and a clea
 
 ## Features
 
-- 30+ Rajasthan rural crop database
+- 50+ Rajasthan rural crop database
 - Crop search by name, Hindi name, district, soil, season, and rural zone
 - Kharif, Rabi, Summer, and perennial crop filtering
 - Water requirement filter: Low, Medium, High
