@@ -1764,22 +1764,21 @@ ZONE_NOTES = {
 
 def build_dataframe() -> pd.DataFrame:
     df = pd.DataFrame(RAJASTHAN_CROPS)
-    df["zone_text"] = df["zones"].apply(lambda items: ", ".join(items))
     df["search_blob"] = (
-        df["crop"]
-        + " "
-        + df["hindi"]
-        + " "
-        + df["type"]
-        + " "
-        + df["season"]
-        + " "
-        + df["districts"]
-        + " "
-        + df["soil"]
-        + " "
-        + df["zone_text"]
-    ).str.lower()
+    df["crop"]
+    + " "
+    + df["hindi"]
+    + " "
+    + df["type"]
+    + " "
+    + df["season"]
+    + " "
+    + df["districts"]
+    + " "
+    + df["soil"]
+    + " "
+    + df["zones"].apply(lambda items: ", ".join(items))
+).str.lower()
     return df
 
 
@@ -2196,7 +2195,12 @@ def show_planner(df: pd.DataFrame) -> None:
     area = c5.number_input("Farm area", min_value=0.1, value=1.0, step=0.1)
     unit = c6.selectbox("Unit", ["Hectare", "Acre", "Bigha"])
 
-    crop_row = df[df["crop"] == selected_crop].iloc[0]
+# ✅ FIXED: Added error handling for missing crops
+crop_data = df[df["crop"] == selected_crop]
+if crop_data.empty:
+    st.error("Crop not found in database!")
+else:
+    crop_row = crop_data.iloc[0]
     hectare = area_to_hectare(area, unit)
     seed_required = hectare * float(crop_row["seed_rate_kg_ha"])
 
@@ -2208,17 +2212,26 @@ def show_planner(df: pd.DataFrame) -> None:
 
 def show_data_table(df: pd.DataFrame) -> None:
     st.subheader("Full Crop Data")
-    export_df = df.drop(columns=["search_blob"]).copy()
-    export_df["zones"] = export_df["zones"].apply(", ".join)
+    
+    # ✅ FIXED: Proper column selection and zones conversion
+    export_df = df[
+        [col for col in df.columns if col not in ["search_blob", "zones"]]
+    ].copy()
+    
+    # Add formatted zones column
+    export_df["zones"] = df["zones"].apply(", ".join)
+    
     st.dataframe(export_df, use_container_width=True, hide_index=True)
-
+    
+    # ✅ MOVE THIS INSIDE THE FUNCTION
+    csv = export_df.to_csv(index=False)
     st.download_button(
-        "Download crop data as CSV",
-        data=export_df.to_csv(index=False).encode("utf-8"),
-        file_name="rajasthan_rural_crop_data.csv",
-        mime="text/csv",
+        "📥 Download CSV",
+        csv,
+        "gramsathi_crops.csv",
+        "text/csv"
     )
-
+    
     st.markdown(
         """
         <div class="source-box">
@@ -2230,7 +2243,6 @@ def show_data_table(df: pd.DataFrame) -> None:
         """,
         unsafe_allow_html=True,
     )
-
 
 def main() -> None:
     inject_css()
