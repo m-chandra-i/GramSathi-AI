@@ -1,10 +1,20 @@
 # GramSathi AI
 
-AI-powered rural assistant for farmers and rural communities, focused on practical crop guidance for Rajasthan villages.
+GramSathi AI is an AI-powered assistant designed to help farmers and rural communities in Rajasthan make informed crop decisions. By providing personalized crop recommendations, seasonal guidance, and practical farming advice tailored to local conditions, GramSathi AI bridges the gap between traditional farming knowledge and modern agricultural science.
 
-## Live App
+## 🌾 Live App
 
-https://gramsathi-ai.streamlit.app/
+Try the live application here: https://gramsathi-ai.streamlit.app/
+
+*No installation required — just visit the link!*
+
+## Getting Started
+
+1. Visit https://gramsathi-ai.streamlit.app/
+2. Enter your village/district and current farming situation
+3. Browse recommended crops with detailed guidance
+4. Use filters for soil type, water availability, and season
+5. Download crop data as CSV for offline reference
 
 ## Current Version
 
@@ -95,7 +105,44 @@ Each crop contains:
 
 ## Run Locally
 
-1. Clone the repository
+# Clone the repository
+git clone https://github.com/m-chandra-i/GramSathi-AI.git
+cd GramSathi-AI
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+
+## Prerequisites
+
+- Python 3.8+
+- pip or conda
+- See `requirements.txt` for dependencies
+
+## Contributing
+
+We welcome contributions! To add crops, improve features, or fix bugs:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+## Support & Feedback
+
+- 📧 Email: [chanramohan61961@gmail.com]
+- 🐛 Report bugs: [GitHub Issues](https://github.com/m-chandra-i/GramSathi-AI/issues)
+- 💡 Suggest features: [GitHub Discussions](https://github.com/m-chandra-i/GramSathi-AI/discussions)
+
 
 ```bash
 git clone https://github.com/m-chandra-i/GramSathi-AI.git
